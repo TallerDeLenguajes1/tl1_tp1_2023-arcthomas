@@ -14,7 +14,15 @@ void cuadradoVoid(int num)
 void mostrarContDir(int *var)
 {
     printf("Dirección de memoria de la variable: %d\n", var);
-    printf("Contenido de la variable: %d\n", *var);
+    printf("Contenido de la variable: %d\n\n", *var);
+}
+
+void invertir(int *a, int *b)
+{
+    int aux = *b;
+    *b = *a;
+    *a = aux;
+    printf("Valores invertidos!\n\n");
 }
 
 int main()
@@ -24,4 +32,10 @@ int main()
     printf("El cuadrado del numero: %d\n", devolverCuadrado(a));
     cuadradoVoid(a);
     mostrarContDir(pA);
+    int b = 3;
+    int *pB = &b;
+    mostrarContDir(pB);
+    invertir(pA, pB);
+    mostrarContDir(pA);
+    mostrarContDir(pB);
 }
