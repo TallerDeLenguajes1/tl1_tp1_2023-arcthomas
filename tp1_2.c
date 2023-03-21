@@ -1,5 +1,9 @@
+// Librerias
+
 #include <stdio.h>
 #include <stdlib.h>
+
+// Funciones
 
 int devolverCuadrado(int num)
 {
@@ -19,6 +23,7 @@ void mostrarContDir(int *var)
 
 void orden(int *a, int *b)
 {
+    printf("Valores iniciales A: %d B: %d\n",*a,*b);
     int aux;
     if (*a > *b)
     {
@@ -32,16 +37,19 @@ void orden(int *a, int *b)
         *a = *b;
         *b = aux;
     }
-    printf("Valores ordenados!\n\n");
+    printf("Valores ordenados! A: %d B: %d\n\n", *a, *b);
 }
 
 void invertir(int *a, int *b)
 {
+    printf("Valores iniciales A: %d B: %d\n",*a,*b);
     int aux = *b;
     *b = *a;
     *a = aux;
-    printf("Valores invertidos!\n\n");
+    printf("Valores invertidos! A: %d B: %d\n\n",*a,*b);
 }
+
+// Main
 
 int main()
 {
