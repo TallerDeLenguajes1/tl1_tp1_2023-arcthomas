@@ -17,6 +17,24 @@ void mostrarContDir(int *var)
     printf("Contenido de la variable: %d\n\n", *var);
 }
 
+void orden(int *a, int *b)
+{
+    int aux;
+    if (*a > *b)
+    {
+        aux = *b;
+        *b = *a;
+        *a = aux;
+    }
+    else
+    {
+        aux = *a;
+        *a = *b;
+        *b = aux;
+    }
+    printf("Valores ordenados!\n\n");
+}
+
 void invertir(int *a, int *b)
 {
     int aux = *b;
@@ -35,7 +53,8 @@ int main()
     int b = 3;
     int *pB = &b;
     mostrarContDir(pB);
-    invertir(pA, pB);
+    // invertir(pA, pB);
+    orden(pA, pB);
     mostrarContDir(pA);
     mostrarContDir(pB);
 }
